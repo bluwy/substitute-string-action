@@ -21,4 +21,4 @@ jobs:
     - name: Echo output
       run: |
         echo "${{ steps.sub.outputs.result }}"
-        echo `cat ./.github/result.txt`
+        echo "`cat ./.github/result.txt`"
