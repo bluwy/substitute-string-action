@@ -73,7 +73,6 @@ Send tweet via a template with [`ethomson/send-tweet-action`](https://github.com
 View the release at https://example.com
 ```
 
-
 **release.yml**
 ```yml
 name: Send a Tweet
@@ -98,6 +97,16 @@ jobs:
           access-token: ${{ secrets.TWITTER_ACCESS_TOKEN }}
           access-token-secret: ${{ secrets.TWITTER_ACCESS_TOKEN_SECRET }}
 ```
+
+## FAQ
+
+#### How is this different than similar existing actions?
+
+There are a few actions out there that allows regex substitutions. While this feature is not supported (yet), this action mainly focuses on providing multiple substitutions at once, which most other actions doesn't support.
+
+The closest action I can find to have this functionaility is [Replace Action](https://github.com/datamonsters/replace-action), but the way it handles multiple substitutions is by defining a comma-separated key-value pair, e.g. `foo=bar,$FOO=Bar_Value`.
+
+This action uses a different approach. By specifying the key and values as parameters of this action, we can take advantage of YAML's styling, extract all the custom parameters and use them for substitutions.
 
 ## License
 
