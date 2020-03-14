@@ -60,7 +60,7 @@ const core = __webpack_require__(470)
 main().catch(e => core.setFailed(e.message))
 
 async function main() {
-  const inputString = await getInputString()
+  let inputString = await getInputString()
 
   if (!inputString) {
     core.info('Input has no text, result will be an empty string')
