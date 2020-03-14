@@ -80,7 +80,7 @@ async function main() {
 
   core.debug(`Substitutions: \n${inputMap}`)
 
-  const formatKey = core.getInput('format-key') || 'key'
+  const formatKey = core.getInput('_format-key') || 'key'
 
   for (const key in inputMap) {
     const pattern = escapeRegExp(formatKey.replace('key', key))

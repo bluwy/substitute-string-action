@@ -20,5 +20,5 @@ jobs:
         BAR: This works!
     - name: Echo output
       run: |
-        echo ${{ steps.sub.outputs.result }}
+        echo "${{ steps.sub.outputs.result }}"
         echo `cat ./.github/result.txt`
