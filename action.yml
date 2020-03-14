@@ -1,0 +1,27 @@
+name: 'Substitute String'
+description: 'Substitute or replace a string from a text or a file'
+author: Bjorn Lu
+branding:
+  icon: repeat
+  color: blue
+inputs:
+  _input-text:
+    description: 'The plain input text. This will take precendence if `_input-file` is also specified.'
+    required: false
+  _input-file:
+    description: 'The file to read as input. `_input-text` will take precedence if it is specified.'
+    required: false
+  _output-file:
+    description: 'The file to write after substitutions.'
+    required: false
+  _format-key:
+    description: >
+      Formats a key before replacing. Use the word `key` to refer to the substitute key.
+      Visit the README for examples.
+    required: false
+outputs:
+  result:
+    description: 'The result string after substitutions.'
+runs:
+  using: 'node12'
+  main: 'dist/index.js'

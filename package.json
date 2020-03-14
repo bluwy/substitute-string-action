@@ -1,0 +1,24 @@
+{
+  "name": "substitute-string-action",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Substitute or replace a string of a text or a file",
+  "main": "index.js",
+  "scripts": {
+    "build": "ncc build index.js",
+    "format": "prettier --write index.js"
+  },
+  "keywords": [
+    "actions",
+    "substitute"
+  ],
+  "author": "Bjorn Lu",
+  "license": "MIT",
+  "dependencies": {
+    "@actions/core": "^1.2.3"
+  },
+  "devDependencies": {
+    "@zeit/ncc": "^0.21.1",
+    "prettier": "^1.19.1"
+  }
+}

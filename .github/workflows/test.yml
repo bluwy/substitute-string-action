@@ -1,0 +1,24 @@
+name: Test
+on: [push]
+
+jobs:
+  test:
+    name: Test substitution
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Execute this action
+      uses: ./
+      id: sub
+      with:
+        _input-file: ./.github/test.txt
+        _output-file: ./.github/result.txt
+        _format-key: '%%key%%'
+        foo: ${{ github.repository }}
+        BAR: This works!
+    - name: Echo output
+      run: |
+        echo ${{ steps.sub.outputs.result }}
+        echo `cat ./.github/result.txt`
