@@ -10,7 +10,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
     - name: Execute this action
-      uses: BjornLuG/substitute-string-action@v1
+      uses: BjornLuG/substitute-string-action@v1.0.0
       id: sub
       with:
         _input-file: ./.github/test.txt

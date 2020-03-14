@@ -1,6 +1,6 @@
 # substitute-string-action
 
-A GitHub Action to easily substitute or replace strings from a text or a file.
+A GitHub Action to easily substitute or replace strings from a text or a file using YAML!
 
 ## Usage
 
@@ -11,7 +11,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: BjornLuG/substitute-string-action
+    - uses: BjornLuG/substitute-string-action@v1.0.0
       id: sub
       with:
         _input-text: 'Hello World!'
