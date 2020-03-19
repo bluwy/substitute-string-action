@@ -83,7 +83,7 @@ jobs:
   tweet:
     runs-on: ubuntu-latest
     steps:
-      - uses: BjornLuG/substitute-string-action
+      - uses: BjornLuG/substitute-string-action@v1
         id: sub
         with:
           _input-file: './.github/tweet_template.txt'
