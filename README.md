@@ -11,7 +11,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: BjornLuG/substitute-string-action@v1.0.0
+    - uses: BjornLuG/substitute-string-action@v1
       id: sub
       with:
         _input-text: 'Hello World!'
