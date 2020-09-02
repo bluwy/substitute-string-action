@@ -62,6 +62,8 @@ For example:
 
 > Note: The keys are case-insensitive, meaning foo can be matched to `Foo`, `FOO`, etc... This is a caveat of GitHub Action's way of handling inputs.
 
+> Extra note: Since June 2020, GitHub Actions started validating input parameters, and because `[keys]` is dynamic, it will emit a `Unexpected input(s)` warning. This will not affect the workflow pipeline as it is only a warning. There is currently no way of disabling it but a [workaround](https://github.community/t/unwanted-warning-for-dynamic-input-properties-to-actions/116454/2) can be used if needed. This behavior is being tracked in [#1](https://github.com/bluwy/substitute-string-action/issues/1).
+
 ## Examples
 
 Send tweet via a template with [`ethomson/send-tweet-action`](https://github.com/ethomson/send-tweet-action):
