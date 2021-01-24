@@ -28,8 +28,11 @@ async function main() {
   const formatKey = core.getInput('_format-key') || 'key'
 
   for (const key in inputMap) {
-    const pattern = escapeRegExp(formatKey.replace('key', key))
-    inputString = inputString.replace(new RegExp(pattern, 'gi'), inputMap[key])
+    const newKey = formatKey.replace('key', key)
+    const pattern = new RegExp(escapeRegExp(newKey), 'gi')
+    // NOTE: Replace with value in function syntax to prevent special patterns replacement
+    // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace#specifying_a_string_as_a_parameter
+    inputString = inputString.replace(pattern, () => inputMap[key])
   }
 
   core.debug(`Result string: \n${inputString}`)
