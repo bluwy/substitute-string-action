@@ -1,8 +1,8 @@
-const fs = require('fs').promises
-const path = require('path')
-const core = require('@actions/core')
+import fs from 'fs/promises' 
+import path from 'path'
+import * as core from '@actions/core'
 
-main().catch(e => core.setFailed(e.message))
+main().catch((e) => core.setFailed(e.message))
 
 async function main() {
   let inputString = await getInputString()

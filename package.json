@@ -2,6 +2,7 @@
   "name": "substitute-string-action",
   "version": "1.0.0",
   "private": true,
+  "type": "module",
   "description": "Substitute or replace a string of a text or a file",
   "main": "index.js",
   "scripts": {
