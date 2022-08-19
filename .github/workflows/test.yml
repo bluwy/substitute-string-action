@@ -8,9 +8,9 @@ jobs:
     
     steps:
     - name: Checkout
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
     - name: Execute this action
-      uses: bluwy/substitute-string-action@v1.0.0
+      uses: bluwy/substitute-string-action@master
       id: sub
       with:
         _input-file: ./.github/test.txt
