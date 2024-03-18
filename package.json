@@ -6,7 +6,7 @@
   "description": "Substitute or replace a string of a text or a file",
   "main": "index.js",
   "scripts": {
-    "build": "esbuild index.js --bundle --outfile=dist/index.js --platform=node --target=node20",
+    "build": "esbuild index.js --bundle --outfile=dist/index.js --platform=node --target=node20 --format=esm",
     "format": "prettier --write index.js"
   },
   "keywords": [
