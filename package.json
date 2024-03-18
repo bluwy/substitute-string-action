@@ -1,12 +1,12 @@
 {
   "name": "substitute-string-action",
-  "version": "1.0.0",
+  "version": "3.0.0",
   "private": true,
   "type": "module",
   "description": "Substitute or replace a string of a text or a file",
   "main": "index.js",
   "scripts": {
-    "build": "ncc build index.js",
+    "build": "esbuild index.js --bundle --outfile=dist/index.js --platform=node --target=node20",
     "format": "prettier --write index.js"
   },
   "keywords": [
@@ -16,10 +16,10 @@
   "author": "Bjorn Lu",
   "license": "MIT",
   "dependencies": {
-    "@actions/core": "^1.10.0"
+    "@actions/core": "^1.10.1"
   },
   "devDependencies": {
-    "@vercel/ncc": "^0.34.0",
-    "prettier": "^2.7.1"
+    "esbuild": "^0.20.2",
+    "prettier": "^3.2.5"
   }
 }
