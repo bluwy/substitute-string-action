@@ -11,7 +11,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: bluwy/substitute-string-action@v3
+      - uses: bluwy/substitute-string-action@v4
         id: sub
         with:
           _input-text: 'Hello World!'

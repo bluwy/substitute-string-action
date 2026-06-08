@@ -1,6 +1,6 @@
 {
   "name": "substitute-string-action",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "private": true,
   "description": "Substitute or replace a string of a text or a file",
   "keywords": [
