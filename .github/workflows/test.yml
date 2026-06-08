@@ -5,20 +5,20 @@ jobs:
   test:
     name: Test substitution
     runs-on: ubuntu-latest
-    
+
     steps:
-    - name: Checkout
-      uses: actions/checkout@v4
-    - name: Execute this action
-      uses: bluwy/substitute-string-action@master
-      id: sub
-      with:
-        _input-file: ./.github/test.txt
-        _output-file: ./.github/result.txt
-        _format-key: '%%key%%'
-        foo: ${{ github.repository }}
-        BAR: This works!
-    - name: Echo output
-      run: |
-        echo "${{ steps.sub.outputs.result }}"
-        echo "`cat ./.github/result.txt`"
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Execute this action
+        uses: bluwy/substitute-string-action@master
+        id: sub
+        with:
+          _input-file: ./.github/test.txt
+          _output-file: ./.github/result.txt
+          _format-key: '%%key%%'
+          foo: ${{ github.repository }}
+          BAR: This works!
+      - name: Echo output
+        run: |
+          echo "${{ steps.sub.outputs.result }}"
+          echo "`cat ./.github/result.txt`"

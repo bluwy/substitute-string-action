@@ -1,8 +1,12 @@
-import fs from 'fs/promises'
-import path from 'path'
+import fs from 'node:fs/promises'
+import path from 'node:path'
 import * as core from '@actions/core'
 
-main().catch((e) => core.setFailed(e.message))
+try {
+  await main();
+} catch (err) {
+  core.setFailed(err.message);
+}
 
 async function main() {
   let inputString = await getInputString()
